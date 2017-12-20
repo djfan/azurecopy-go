@@ -107,6 +107,9 @@ func setupConfiguration() *misc.CloudConfig {
 	var s3DestAccessSecret = flag.String("S3DestAccessSecret", "", "Destination S3 Access Secret")
 	var s3DestRegion = flag.String("S3DestRegion", "", "Destination S3 Region")
 
+	// 20dec
+	var s3Token = flag.String("S3Token", "", "S3 Token")
+
 	flag.Parse()
 
 	config.Version = *version
@@ -142,6 +145,8 @@ func setupConfiguration() *misc.CloudConfig {
 		config.Configuration[misc.S3DestAccessID] = *s3DestAccessID
 		config.Configuration[misc.S3DestAccessSecret] = *s3DestAccessSecret
 		config.Configuration[misc.S3DestRegion] = *s3DestRegion
+		//20dec
+		config.Configuration[misc.S3Token] = *s3Token
 	}
 
 	return config
