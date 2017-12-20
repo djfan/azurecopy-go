@@ -33,7 +33,8 @@ type S3Handler struct {
 }
 
 // NewS3Handler factory to create new one. Evil?
-func NewS3Handler(accessID string, accessSecret string, region string, isSource bool, cacheToDisk bool) (*S3Handler, error) {
+//20dec
+func NewS3Handler(accessID string, accessSecret string, region string, token string, isSource bool, cacheToDisk bool) (*S3Handler, error) {
 
 	sh := new(S3Handler)
 
@@ -45,8 +46,8 @@ func NewS3Handler(accessID string, accessSecret string, region string, isSource 
 
 	sh.cacheLocation = dir
 	sh.IsSource = isSource
-
-	creds := credentials.NewStaticCredentials(accessID, accessSecret, "")
+//20dec
+	creds := credentials.NewStaticCredentials(accessID, accessSecret, token)
 	_, err = creds.Get()
 	if err != nil {
 		log.Fatalf("Bad S3 credentials: %s", err)
