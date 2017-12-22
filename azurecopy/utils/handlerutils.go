@@ -1,9 +1,9 @@
 package utils
 
 import (
-	"github.com/djfan/azurecopy/handlers"
-	"github.com/djfan/azurecopy/models"
-	"github.com/djfan/azurecopy/utils/misc"
+	"azurecopy/azurecopy/handlers"
+	"azurecopy/azurecopy/models"
+	"azurecopy/azurecopy/utils/misc"
 
 	log "github.com/Sirupsen/logrus"
 )
@@ -33,9 +33,7 @@ func GetHandler(cloudType models.CloudType, isSource bool, config misc.CloudConf
 
 	case models.S3:
 		log.Debug("Got S3 Handler")
-		//20dec
-		//accessID, accessSecret, region := getS3Credentials(isSource, config)
-		accessID, accessSecret, region, token := getS3Credentials(isSource, config)
+		accessID, accessSecret, region := getS3Credentials(isSource, config)
 
 		sh, _ := handlers.NewS3Handler(accessID, accessSecret, region, isSource, true)
 		return sh
@@ -66,31 +64,22 @@ func GetAzureCredentials(isSource bool, config misc.CloudConfig) (accountName st
 	return accountName, accountKey
 }
 
-//20dec
-func getS3Credentials(isSource bool, config misc.CloudConfig) (accessID string, accessSecret string, region string, token string) {
+func getS3Credentials(isSource bool, config misc.CloudConfig) (accessID string, accessSecret string, region string) {
 	if isSource {
 		accessID = config.Configuration[misc.S3SourceAccessID]
 		accessSecret = config.Configuration[misc.S3SourceAccessSecret]
 		region = config.Configuration[misc.S3SourceRegion]
-		//20dec
-		token = config.Configuration[misc.S3Token]
 	} else {
 		accessID = config.Configuration[misc.S3DestAccessID]
 		accessSecret = config.Configuration[misc.S3DestAccessSecret]
 		region = config.Configuration[misc.S3DestRegion]
-		//20dec
-		token = config.Configuration[misc.S3Token]
 	}
 
 	if accessID == "" || accessSecret == "" {
 		accessID = config.Configuration[misc.S3DefaultAccessID]
 		accessSecret = config.Configuration[misc.S3DefaultAccessSecret]
 		region = config.Configuration[misc.S3DefaultRegion]
-		//20dec
-		token = config.Configuration[misc.S3Token]
 	}
 
-  //20dec
-	//return accessID, accessSecret, region
-	return accessID, accessSecret, region, token
+	return accessID, accessSecret, region
 }

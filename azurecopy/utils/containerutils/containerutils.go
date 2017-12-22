@@ -1,7 +1,7 @@
 package containerutils
 
 import (
-	"github.com/djfan/azurecopy/models"
+	"azurecopy/azurecopy/models"
 
 	log "github.com/Sirupsen/logrus"
 )

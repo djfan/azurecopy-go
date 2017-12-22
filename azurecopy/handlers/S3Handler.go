@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"github.com/djfan/azurecopy/models"
-	"github.com/djfan/azurecopy/utils/containerutils"
-	"github.com/djfan/azurecopy/utils/misc"
+	"azurecopy/azurecopy/models"
+	"azurecopy/azurecopy/utils/containerutils"
+	"azurecopy/azurecopy/utils/misc"
 	"bytes"
 	"errors"
 	"fmt"
@@ -33,8 +33,7 @@ type S3Handler struct {
 }
 
 // NewS3Handler factory to create new one. Evil?
-//20dec
-func NewS3Handler(accessID string, accessSecret string, region string, token string, isSource bool, cacheToDisk bool) (*S3Handler, error) {
+func NewS3Handler(accessID string, accessSecret string, region string, isSource bool, cacheToDisk bool) (*S3Handler, error) {
 
 	sh := new(S3Handler)
 
@@ -46,8 +45,8 @@ func NewS3Handler(accessID string, accessSecret string, region string, token str
 
 	sh.cacheLocation = dir
 	sh.IsSource = isSource
-//20dec
-	creds := credentials.NewStaticCredentials(accessID, accessSecret, token)
+
+	creds := credentials.NewStaticCredentials(accessID, accessSecret, "")
 	_, err = creds.Get()
 	if err != nil {
 		log.Fatalf("Bad S3 credentials: %s", err)

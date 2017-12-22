@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"github.com/djfan/azurecopy/models"
-	"github.com/djfan/azurecopy/utils/blobutils"
-	"github.com/djfan/azurecopy/utils/containerutils"
-	"github.com/djfan/azurecopy/utils/helpers"
+	"azurecopy/azurecopy/models"
+	"azurecopy/azurecopy/utils/blobutils"
+	"azurecopy/azurecopy/utils/containerutils"
+	"azurecopy/azurecopy/utils/helpers"
 	"errors"
 	"io/ioutil"
 	"regexp"

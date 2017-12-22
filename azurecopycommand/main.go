@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/djfan/azurecopy-go/azurecopy"
-	"github.com/djfan/azurecopy-go/azurecopy/models"
-	"github.com/djfan/azurecopy-go//azurecopy/utils/misc"
+	"azurecopy/azurecopy"
+	"azurecopy/azurecopy/models"
+	"azurecopy/azurecopy/utils/misc"
 	"flag"
 	"fmt"
 

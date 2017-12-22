@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/djfan/azurecopy/models"
+	"azurecopy/azurecopy/models"
 	"path/filepath"
 	"strings"
 

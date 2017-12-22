@@ -1,8 +1,8 @@
 package blobutils
 
 import (
-	"github.com/djfan/azurecopy/models"
-	"github.com/djfan/azurecopy/utils/misc"
+	"azurecopy/azurecopy/models"
+	"azurecopy/azurecopy/utils/misc"
 	"io"
 	"os"
 
