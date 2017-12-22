@@ -1,8 +1,8 @@
 package helpers
 
 import (
-	"azurecopy/azurecopy/models"
-	"azurecopy/azurecopy/utils/containerutils"
+	"github.com/djfan/azurecopy/models"
+	"github.com/djfan/azurecopy/utils/containerutils"
 
 	"github.com/Azure/azure-storage-go"
 

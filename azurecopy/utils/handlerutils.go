@@ -1,9 +1,9 @@
 package utils
 
 import (
-	"azurecopy/azurecopy/handlers"
-	"azurecopy/azurecopy/models"
-	"azurecopy/azurecopy/utils/misc"
+	"github.com/djfan/azurecopy/handlers"
+	"github.com/djfan/azurecopy/models"
+	"github.com/djfan/azurecopy/utils/misc"
 
 	log "github.com/Sirupsen/logrus"
 )

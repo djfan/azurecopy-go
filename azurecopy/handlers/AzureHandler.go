@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"azurecopy/azurecopy/models"
-	"azurecopy/azurecopy/utils/containerutils"
-	"azurecopy/azurecopy/utils/misc"
+	"github.com/djfan/azurecopy/models"
+	"github.com/djfan/azurecopy/utils/containerutils"
+	"github.com/djfan/azurecopy/utils/misc"
 	"encoding/base64"
 	"errors"
 	"fmt"
