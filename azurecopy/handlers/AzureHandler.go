@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"azurecopy/azurecopy/models"
-	"azurecopy/azurecopy/utils/containerutils"
-	"azurecopy/azurecopy/utils/misc"
+	"github.com/djfan/azurecopy-go/azurecopy/models"
+	"github.com/djfan/azurecopy-go/azurecopy/utils/containerutils"
+	"github.com/djfan/azurecopy-go/azurecopy/utils/misc"
 	"encoding/base64"
 	"errors"
 	"fmt"
@@ -15,7 +15,8 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/satori/uuid"
 
-	storage "azure-sdk-for-go/storage"
+	storage "github.com/Azure/azure-sdk-for-go/storage"
+  // storage "github.com/Azure/azure-storage-go"
 )
 
 type AzureHandler struct {

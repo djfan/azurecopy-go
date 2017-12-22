@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"azurecopy/azurecopy/models"
+	"github.com/djfan/azurecopy-go/azurecopy/models"
 	"path/filepath"
 	"strings"
 
