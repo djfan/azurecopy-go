@@ -1,11 +1,11 @@
 package azurecopy
 
 import (
-	"azurecopy/azurecopy/handlers"
-	"azurecopy/azurecopy/models"
-	"azurecopy/azurecopy/utils"
-	"azurecopy/azurecopy/utils/helpers"
-	"azurecopy/azurecopy/utils/misc"
+	"github.com/djfan/azurecopy-go/azurecopy/handlers"
+	"github.com/djfan/azurecopy-go/azurecopy/models"
+	"github.com/djfan/azurecopy-go/azurecopy/utils"
+	"github.com/djfan/azurecopy-go/azurecopy/utils/helpers"
+	"github.com/djfan/azurecopy-go/azurecopy/utils/misc"
 	"fmt"
 	"regexp"
 	"strings"
